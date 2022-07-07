@@ -10,7 +10,12 @@ h1 {
 p {
   font-size: 15px;
   color: rgb(96, 92, 92);
-  font-family: "Source Sans Pro", Arial;
+}
+
+.address {
+  font-weight: 400;
+  font-size: 15px;
+  color: rgb(96, 92, 92);
 }
 
 .logo {
@@ -21,6 +26,8 @@ p {
 
 .mobile-header {
   line-height: normal;
+  margin: 36px;
+  font-weight: 600;
 }
 
 .menu-section {
@@ -169,5 +176,9 @@ p.menu-list__item-desc + span.dots {
     float: none;
     width: 100%;
     max-width: 95%;
+  }
+
+  .mobile-header h1 {
+    font-size: 26px;
   }
 }
