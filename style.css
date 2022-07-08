@@ -6,6 +6,7 @@ h1 {
   text-align: center;
   color: red;
   letter-spacing: 1.85px;
+  font-weight: 600;
 }
 
 p {
@@ -32,18 +33,26 @@ p {
 }
 
 .menu-section {
+  --gap: 45px;
   margin: 0 auto;
   display: block;
   width: 100%;
   max-width: 1200px;
-  padding-top: 25px;
+  padding: var(--gap);
+  columns: 2;
+  column-gap: var(--gap);
 }
 
 .menu-list {
-  float: left;
-  width: 49%;
-  margin-right: 10px;
-  padding-bottom: 25px;
+  break-inside: avoid-column;
+}
+
+.menu-list {
+  padding-block-end: var(--gap);
+}
+
+.menu-list__items {
+  padding-left: unset;
 }
 
 .menu-list hr {
@@ -171,6 +180,10 @@ p.menu-list__item-desc + span.dots {
   float: left;
 }
 @media (max-width: 1000px) {
+  .menu-section {
+    --gap: 25px;
+    columns: 1;
+  }
   .menu-list {
     display: block;
     margin: 0 auto;
